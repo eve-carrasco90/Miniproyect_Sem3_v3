@@ -12,3 +12,11 @@ df['Precio_Total'] = df['Cantidad'] * df['Precio']
 print(df)
 #Creación de columna precio total
 
+import matplotlib.pyplot as plt
+#Incoporación de matplotlib
+plt.bar(df['Producto'], df['Precio_Total'])
+plt.xlabel('Producto')
+plt.ylabel('Precio Total')
+plt.title('Precio Total por Producto')
+plt.savefig('grafico_precios.png')  # Guardar el gráfico en formato PNG
+plt.show()
