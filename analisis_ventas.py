@@ -7,3 +7,8 @@ df = pd.read_csv(archivo_csv, sep=";")
 
 #Para ver las primeras 5 filas
 print(df.head())
+
+df['Precio_Total'] = df['Cantidad'] * df['Precio']
+print(df)
+#Creación de columna precio total
+
